@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Doces e Delicias da Gi</title>
+</head>
+
+<body class="bg-gradient-to-b from-[#d4a6a1] to-[#f5e1d6]">
+
+    <!--HEADER-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-cover bg-center"
+        style="background-image: url(/assets/brigadeiro.jpg);">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/KinderBueno.jpeg" alt="Ovo de KinderBueno"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Doces & Delícias da Gi</h1>
+
+            <span class="text-white font-medium">Brasília-DF</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Encomendas até dia 14/04/2025</span>
+            </div>
+
+        </div>
+    </header>
+    <!--FIM HEADER-->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 text-[#6d2c09] uppercase">Conheça nosso cardápio
+    </h2>
+
+
+    <!--INÍCIO DO CARDAPIO TRADICIONAIS-->
+    <div id="menu">
+        <div class="mx-auto max-w-7xl px-2 my-2 flex justify-center">
+            <h2
+                class="font-bold text-3xl text-center text-[#000000] px-4 py-2 rounded-2xl shadow-xl max-w-xs border-4 border-[#ffffff] bg-gradient-to-r from-[#d4f1e6] to-[#a8dbca] tracking-wider whitespace-nowrap ">
+                Ovos Tradicionais
+            </h2>
+        </div>
+
+
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--PRODUTO ITEM 1-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#d4f1e6] to-[#a8dbca] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Beijinho</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/Beijinho.jpeg" alt="Ovo de Páscoa de Beijinho"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Beijinho 270g" data-price="35.00">270g: R$35,00</option>
+                        <option value="" data-name="Ovo de Beijinho 380g" data-price="45.00">380g: R$45,00</option>
+                        <option value="" data-name="Ovo de Beijinho 500g" data-price="58.00">500g: R$58,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-green-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-green-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-green-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 1-->
+
+            <!--PRODUTO ITEM 2-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div class="flex justify-center">
+                    <!-- Cartão do Produto -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-b from-[#d4f1e6] to-[#a8dbca] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                        <!-- Texto acima da imagem, estilizado como título -->
+                        <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Brigadeiro
+                        </p>
+
+                        <!-- Imagem -->
+                        <img src="./assets/Brigadeiro.jpeg" alt="Ovo de Páscoa de Brigadeiro"
+                            class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                        <!-- Opções de Seleção -->
+                        <select name="Selecione o tamanho" id="product-select"
+                            class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <option value="" disabled selected>Selecione o tamanho</option>
+                            <option value="" data-name="Ovo de Brigadeiro 270g" data-price="35.00">270g: R$35,00
+                            </option>
+                            <option value="" data-name="Ovo de Brigadeiro 380g" data-price="45.00">380g: R$45,00
+                            </option>
+                            <option value="" data-name="Ovo de Brigadeiro 500g" data-price="58.00">500g: R$58,00
+                            </option>
+                        </select>
+
+                        <select name="Selecione a casca" id="casca-select"
+                            class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <option value="" disabled selected>Selecione o tipo de casca</option>
+                            <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                            <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite
+                            </option>
+                            <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                            </option>
+                        </select>
+
+                        <div class="flex items-center gap-3 mt-5">
+                            <!-- Campo de quantidade -->
+                            <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                                class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-green-500"
+                                min="1">
+
+                            <!-- Botão de adicionar ao carrinho -->
+                            <button
+                                class="bg-green-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-green-600 flex items-center justify-center shadow-md transition duration-300"
+                                id="add-to-cart-btn">
+                                <i class="fa fa-cart-plus text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 2-->
+
+            <!--PRODUTO ITEM 3-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#d4f1e6] to-[#a8dbca] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Prestígio</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/Prestigio.jpeg" alt="Ovo de Páscoa de Prestígio"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Prestígio 270g" data-price="35.00">270g: R$35,00</option>
+                        <option value="" data-name="Ovo de Prestígio 380g" data-price="45.00">380g: R$45,00</option>
+                        <option value="" data-name="Ovo de Prestígio 500g" data-price="58.00">500g: R$58,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-green-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-green-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-green-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-green-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 3-->
+        </main>
+
+        <!--Fim dos Tradicioanis-->
+
+        <!--Inicio dos Especiais-->
+
+        <div class="mx-auto max-w-7xl px-2 my-2 flex justify-center">
+            <h2
+                class="font-bold text-3xl text-center text-[#000000] px-4 py-2 rounded-2xl shadow-xl max-w-xs border-4 border-[#ffffff] bg-gradient-to-r from-[#f9d5e5] to-[#f7a1b4] tracking-wider">
+                Ovos Especiais
+            </h2>
+        </div>
+
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--PRODUTO ITEM 1-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">M&Ms</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/MeMs.jpeg" alt="Ovo de Páscoa de M&Ms"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de M&Ms 270g" data-price="42.00">270g: R$42,00</option>
+                        <option value="" data-name="Ovo de M&Ms 380g" data-price="55.00">380g: R$55,00</option>
+                        <option value="" data-name="Ovo de M&Ms 500g" data-price="70.00">500g: R$70,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 1-->
+
+            <!--PRODUTO ITEM 2-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Tortuguita</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/Tortuguita.jpeg" alt="Ovo de Páscoa de Tortuguita"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Tortuguita 270g" data-price="42.00">270g: R$42,00</option>
+                        <option value="" data-name="Ovo de Tortuguita 380g" data-price="55.00">380g: R$55,00</option>
+                        <option value="" data-name="Ovo de Tortuguita 500g" data-price="70.00">500g: R$70,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 2-->
+
+            <!--PRODUTO ITEM 3-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Ouro Branco
+                    </p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/WhatsApp Image 2025-03-18 at 16.02.46.jpeg" alt="Ovo de Páscoa de Ouro Branco"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Ouro Branco 270g" data-price="42.00">270g: R$42,00</option>
+                        <option value="" data-name="Ovo de Ouro Branco 380g" data-price="55.00">380g: R$55,00</option>
+                        <option value="" data-name="Ovo de Ouro Branco 500g" data-price="70.00">500g: R$70,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 3-->
+
+            <!--PRODUTO ITEM 4-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Sonho de Valsa
+                    </p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/sonhodevalsa.jpeg" alt="Ovo de Páscoa de Sonho de Valsa"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Sonho de Valsa 270g" data-price="42.00">270g: R$42,00
+                        </option>
+                        <option value="" data-name="Ovo de Sonho de Valsa 380g" data-price="55.00">380g: R$55,00
+                        </option>
+                        <option value="" data-name="Ovo de Sonho de Valsa 500g" data-price="70.00">500g: R$70,00
+                        </option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 4-->
+
+            <!--PRODUTO ITEM 5-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Maracujá</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/Maracuja.jpeg" alt="Ovo de Páscoa de Maracujá"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Maracujá 270g" data-price="42.00">270g: R$42,00</option>
+                        <option value="" data-name="Ovo de Maracujá 380g" data-price="55.00">380g: R$55,00</option>
+                        <option value="" data-name="Ovo de Maracujá 500g" data-price="70.00">500g: R$70,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 5-->
+
+            <!--PRODUTO ITEM 6-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#f9d5e5] to-[#f7a1b4] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Brigadeiro com
+                        Maracujá</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/BrigadeiroMaracuja.jpeg" alt="Ovo de Brigadeiro com Maracujá"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Brigadeiro com Maracujá 270g" data-price="42.00">270g:
+                            R$42,00</option>
+                        <option value="" data-name="Ovo de Brigadeiro com Maracujá 380g" data-price="55.00">380g:
+                            R$55,00</option>
+                        <option value="" data-name="Ovo de Brigadeiro com Maracujá 500g" data-price="70.00">500g:
+                            R$70,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-pink-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-pink-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-pink-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--FIM PRODUTO ITEM 6-->
+        </main>
+
+        <!--Fim dos Especiais-->
+
+        <!--Inicio do Premium-->
+        <div class="mx-auto max-w-7xl px-2 my-2 flex justify-center">
+            <h2
+                class="font-bold text-3xl text-center text-[#000000] px-4 py-2 rounded-2xl shadow-xl max-w-xs border-4 border-[#ffffff] bg-gradient-to-r from-[#e8d5a1] to-[#c7a96d] tracking-wider">
+                Ovos Premium
+            </h2>
+        </div>
+
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--PRODUTO ITEM 1-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#e8d5a1] to-[#c7a96d] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Kinder Bueno
+                    </p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/Kinder.jpeg" alt="Ovo de Páscoa de Kinder Bueno"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Kinder Bueno 270g" data-price="48.00">270g: R$48,00</option>
+                        <option value="" data-name="Ovo de Kinder Bueno 380g" data-price="65.00">380g: R$65,00</option>
+                        <option value="" data-name="Ovo de Kinder Bueno 500g" data-price="85.00">500g: R$85,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-yellow-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-yellow-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 1-->
+
+            <!--PRODUTO ITEM 2-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#e8d5a1] to-[#c7a96d] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Ferrero Rocher
+                    </p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/FerreroRocher.jpg" alt="Ovo de Páscoa de Ferrero Rocher"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="" data-name="Ovo de Ferrero Rocher 270g" data-price="48.00">270g: R$48,00
+                        </option>
+                        <option value="" data-name="Ovo de Ferrero Rocher 380g" data-price="65.00">380g: R$65,00
+                        </option>
+                        <option value="" data-name="Ovo de Ferrero Rocher 500g" data-price="85.00">500g: R$85,00
+                        </option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-yellow-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-yellow-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--FIM PRODUTO ITEM 2-->
+
+            <!--PRODUTO ITEM 3-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div class="flex justify-center">
+                    <!-- Cartão do Produto -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-b from-[#e8d5a1] to-[#c7a96d] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                        <!-- Texto acima da imagem, estilizado como título -->
+                        <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Ninho com
+                            Nutella</p>
+
+                        <!-- Imagem -->
+                        <img src="./assets/nutela.jpeg" alt="Ovo de Páscoa de Ninho com Nutella"
+                            class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                        <!-- Opções de Seleção -->
+                        <select name="Selecione o tamanho" id="product-select"
+                            class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            <option value="" disabled selected>Selecione o tamanho</option>
+                            <option value="" data-name="Ovo de Ninho com Nutella 270g" data-price="48.00">270g: R$48,00
+                            </option>
+                            <option value="" data-name="Ovo de Ninho com Nutella 380g" data-price="65.00">380g: R$65,00
+                            </option>
+                            <option value="" data-name="Ovo de Ninho com Nutella 500g" data-price="85.00">500g: R$85,00
+                            </option>
+                        </select>
+
+                        <select name="Selecione a casca" id="casca-select"
+                            class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            <option value="" disabled selected>Selecione o tipo de casca</option>
+                            <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                            <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite
+                            </option>
+                            <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                            </option>
+                        </select>
+
+                        <div class="flex items-center gap-3 mt-5">
+                            <!-- Campo de quantidade -->
+                            <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                                class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-gold rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                                min="1">
+
+                            <!-- Botão de adicionar ao carrinho -->
+                            <button
+                                class="bg-yellow-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-yellow-600 flex items-center justify-center shadow-md transition duration-300"
+                                id="add-to-cart-btn">
+                                <i class="fa fa-cart-plus text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 3-->
+
+
+            <!--FIM PRODUTO ITEM 6-->
+        </main>
+
+        <!-- Início Ovo Tablete-->
+        <!--Inicio do Premium-->
+        <div class="mx-auto max-w-7xl px-2 my-2 flex justify-center">
+            <h2
+                class="font-bold text-3xl text-center text-[#000000] px-4 py-2 rounded-2xl shadow-xl max-w-xs border-4 border-[#ffffff] bg-gradient-to-r from-[#8a7350] to-[#9b815b] tracking-wider">
+                Ovo Tablete
+            </h2>
+        </div>
+
+
+        <main class="flex justify-center mt-2 pb-20">
+            <!--PRODUTO ITEM 1-->
+            <div class="flex justify-center">
+                <!-- Cartão do Produto -->
+                <div
+                    class="flex flex-col items-center bg-gradient-to-b from-[#8a7350] to-[#9b815b] rounded-2xl shadow-xl p-6 w-full max-w-xs border-4 border-[#ffffff]">
+                    <!-- Texto acima da imagem, estilizado como título -->
+                    <p class="text-black font-extrabold mb-4 text-xl text-center uppercase tracking-wide">Tablete
+                        recheado 190g</p>
+
+                    <!-- Imagem -->
+                    <img src="./assets/OvoTablete.jpeg" alt="Ovo de Páscoa de Beijinho"
+                        class="w-32 h-32 rounded-xl hover:scale-110 hover:rotate-3 duration-300 shadow-md border-2 border-white mb-4">
+
+                    <!-- Opções de Seleção -->
+                    <select name="Selecione o tamanho" id="product-select"
+                        class="block w-full px-4 py-2 text-gray-900 bg-white border-2 border-brown-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-brown-500">
+                        <option value="" disabled selected>Selecione o sabor</option>
+                        <option value="" data-name="Ovo Tablete Ninho 190g" data-price="22.00">Ninho: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Beijinho 190g" data-price="22.00">Beijinho: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Brigadeiro 190g" data-price="22.00">Brigadeiro: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Prestígio 190g" data-price="22.00">Prestígio: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Maracujá 190g" data-price="22.00">Maracujá: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Brigadeiro c/maracujá 190g" data-price="22.00">Brigadeiro c/maracujá: R$22,00</option>
+                        <option value="" data-name="Ovo Tablete Ninho c/brigadeiro 190g" data-price="22.00">Ninho c/brigadeiro: R$22,00</option>
+                    </select>
+
+                    <select name="Selecione a casca" id="casca-select"
+                        class="block w-full px-4 py-2 mt-3 text-gray-900 bg-white border-2 border-brown-500 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-brown-500">
+                        <option value="" disabled selected>Selecione o tipo de casca</option>
+                        <option value="" data-name="casca de chocolate branco">Casca de chocolate branco</option>
+                        <option value="" data-name="casca de chocolate ao leite">Casca de chocolate ao leite</option>
+                        <option value="" data-name="casca de chocolate meio amargo">Casca de chocolate meio amargo
+                        </option>
+                    </select>
+
+                    <div class="flex items-center gap-3 mt-5">
+                        <!-- Campo de quantidade -->
+                        <input type="number" placeholder="Qtd" id="quantidade-de-ovos" name="quantity"
+                            class="block w-1/3 px-3 py-2 text-gray-900 bg-white border-2 border-brown-500 rounded-xl shadow-md text-center focus:outline-none focus:ring-2 focus:ring-brown-500"
+                            min="1">
+
+                        <!-- Botão de adicionar ao carrinho -->
+                        <button
+                            class="bg-brown-500 px-5 py-2 rounded-xl text-white font-bold hover:bg-brown-600 flex items-center justify-center shadow-md transition duration-300"
+                            id="add-to-cart-btn">
+                            <i class="fa fa-cart-plus text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM 1-->
+        </main>
+    </div>
+    <!--FIM DO CARDAPIO-->
+
+
+    <!--MODAL-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total do pedido: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Observações do pedido:</p>
+            <input type="text" placeholder="Ex: Desejo uma caixa com estampa infantil..." id="address"
+                class="w-full border-2 p-1 rounded my-1">
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+        </div>
+
+    </div>
+    <!--FIM DA MODAL-->
+
+    <!--BUTTON CART FOOTER-->
+    <footer class="w-full bg-[#ffffff] py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-black  font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Ver carrinho
+            <i class="fa fa-cart-plus  text-lg text-black"></i>
+        </button>
+    </footer>
+    <!--BUTTON CART FOOTER-->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
