@@ -11,6 +11,8 @@ const buttonCar = document.getElementById("add-to-cart-btn");
 
 let cart = [];
 
+
+
 //Abrindo a modal do carrinho
 cartBtn.addEventListener("click", function(){
     updateCartModal();
@@ -86,26 +88,25 @@ function updateCartModal(){
         cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
         cartItemElement.innerHTML = `
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="font-medium">${item.name}</p>
-                    <p>Quantidade: ${item.quantity}</p>
-                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)} a unidade</p>
-                    <p>${item.cascadoOvo}</p>
-                    <p>-------------------------------------------------------------------</p>
-                </div>
-            
-             
-                <button class="remove-from-cart-btn" data-name="${item.name}">
-                    Remover
-                </button>
+    <div class="flex items-center justify-between">
+        <div>
+            <p class="font-medium">${item.name}</p>
+            <p>${item.cascadoOvo}</p>
+            <p>Quantidade: ${item.quantity}</p>
+            <p class="font-medium mt-2">R$ ${item.price.toFixed(2)} a unidade</p>
+            <p>----------------------------------</p>
+        </div>
 
-                <button class="add-from-cart-btn" data-name="${item.name}">
-                    Adicionar
-                </button>
-              
-            </div>
-        `
+        <div class="flex space-x-2 sm:space-x-4"> 
+            <button class="remove-from-cart-btn px-3 py-1 bg-red-500 text-white rounded" data-name="${item.name}">
+                Remover
+            </button>
+            <button class="add-from-cart-btn px-3 py-1 bg-green-500 text-white rounded" data-name="${item.name}">
+                Adicionar
+            </button>
+        </div>
+    </div>
+    `;
 
         total += item.price * item.quantity;
 
@@ -183,6 +184,7 @@ checkoutBtn.addEventListener("click", function(){
     const cartItems = cart.map((item) => {
         return(
             `*${item.name}*\n` +
+            `*${item.cascadoOvo}*\n` +
             `*Quantidade:* ${item.quantity}\n` +
             `*Preço:* R$${item.price.toFixed(2)} a unidade\n` +
             `*Valor total:* R$${item.price.toFixed(2) * item.quantity.toFixed(2)}\n` +
