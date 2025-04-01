@@ -44,7 +44,7 @@ document.querySelectorAll("#add-to-cart-btn").forEach(button => {
         const cascaselectedOption = casca.options[casca.selectedIndex];
 
         const quantidadeInput = productCard.querySelector("input[name='quantity']");
-        const quantity = parseInt(quantidadeInput.value) || 1;
+        const quantity = parseInt(quantidadeInput.value) || 0;
 
         if (selectedOption.disabled) {
             alert("Por favor, selecione um tamanho");
@@ -56,11 +56,17 @@ document.querySelectorAll("#add-to-cart-btn").forEach(button => {
             return;
         }
 
+        if (quantity === 0){
+            alert("Por favor, digite um valor válido");
+        }
+
         const name = selectedOption.getAttribute("data-name");
         const price = parseFloat(selectedOption.getAttribute("data-price"));
         const cascadoOvo = cascaselectedOption.getAttribute("data-name");
 
         addToCart(name, price, cascadoOvo, quantity);
+
+        quantidadeInput.value = "";
     });
 });
 
