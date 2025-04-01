@@ -17,18 +17,21 @@ let cart = [];
 cartBtn.addEventListener("click", function(){
     updateCartModal();
     cartModal.style.display = "flex";
+    document.body.classList.add("overflow-hidden"); // Impede rolagem do fundo
 })
 
 //Fechando a modal quando clicar fora
 cartModal.addEventListener("click", function(event){
     if(event.target === cartModal){
         cartModal.style.display = "none";
+        document.body.classList.remove("overflow-hidden"); // Permite rolagem novamente
     }
 })
 
 //Fechando a modal do carrinho
 closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none";
+    document.body.classList.remove("overflow-hidden"); // Permite rolagem novamente
 })
 
 // Capturando todos os botões de adicionar ao carrinho
